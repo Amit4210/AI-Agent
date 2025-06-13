@@ -37,10 +37,6 @@ def weather_info(city: str) -> str:
         return f"Error getting weather: {str(e)}"
 
 
-
-
-
-
 def main():
     model = ChatOpenAI(temperature=0)
 
