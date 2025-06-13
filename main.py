@@ -23,10 +23,10 @@ def weather_info(city: str) -> str:
 
     try:
         url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric"
-        response = requests.get(url) ##
-        data = response.json() ##
+        response = requests.get(url) 
+        data = response.json() # changes the response into a python dictionalry
 
-        if response.status_code == 200: ##
+        if response.status_code == 200:
             temp = data['main']['temp']
             description = data['weather'][0]['description']
             humidity = data['main']['humidity']
